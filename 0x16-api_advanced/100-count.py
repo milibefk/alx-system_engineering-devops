@@ -1,17 +1,8 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """Contains the count_words function"""
-=======
-""" Recursive function that queries the Reddit API
-    parses the title of all hot articles, and prints a sorted count"""
->>>>>>> 3e8c13c57bafcd60e289b88143466f0ddf869cca
 import requests
-import sys
-after = None
-count_dic = []
 
 
-<<<<<<< HEAD
 def count_words(subreddit, word_list, found_list=[], after=None):
     '''Prints counts of given words found in hot posts of a given subreddit.
 
@@ -50,15 +41,3 @@ def count_words(subreddit, word_list, found_list=[], after=None):
                 print('{}: {}'.format(key, value))
     else:
         return
-=======
-def count_words(subreddit, word_list):
-    """parses the title of all hot articles, and prints a sorted count of given
-    keywords (case-insensitive, delimited by spaces) """
-    global after
-    global count_dic
-    headers = {'User-Agent': 'xica369'}
-    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    parameters = {'after': after}
-    response = requests.get(url, headers=headers, allow_redirects=False,
-            params=parameters))
->>>>>>> 3e8c13c57bafcd60e289b88143466f0ddf869cca
